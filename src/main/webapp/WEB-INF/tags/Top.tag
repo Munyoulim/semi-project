@@ -14,18 +14,33 @@
 	
 	.left2 {
 	   grid-area: left2;
-	   background-color : grey;
+	   background-color : DarkSeaGreen;
 	}
 	
 	.main2 {
 	   grid-area: main2;
-	   background-color : yellow;
+	   background-color : DarkKhaki;
 	}
 	
 	.right2 {
 	   grid-area: right2;
-	   background-color : grey;
+	   background-color : DarkSeaGreen;
 	}
+	
+	.form-control {
+		height: 100%;
+		width : 150%;
+		margin-top : 7.5%;
+		margin-right : 6%;
+	}
+	
+	.btn {
+		height : 100%;
+		width : 16%;
+		margin-top : 7%;
+		margin-right : 6%;
+	}
+	
 
 </style>
 
@@ -36,8 +51,8 @@
 	            <img src="../resources/picture/jejutrip.jpg" />
 	         </a>
 	         <input class="form-control me-2" type="search"
-	            placeholder="검색어를 입력해주세요" aria-label="검색" id="surf">
-	         <button id="butt" class="btn btn-outline-success" type="submit">Search</button>
+	            placeholder="검색 창" aria-label="검색">
+	         <button class="btn btn-outline-success" type="submit">Search</button>
 	    </form>
 	   </div>
 	   <div class="left2">left2</div>

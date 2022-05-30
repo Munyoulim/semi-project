@@ -26,7 +26,7 @@
 	crossorigin="anonymous"></script>
 
 <style>
-	.container {
+	.container1 {
 		display : grid;
 		grid-template-columns: 20% 1fr 20%;
 		grid-template-rows : 1fr;
@@ -37,7 +37,7 @@
 	
 	.left {
 		grid-area : left;
-		background-color : grey;
+		background-color : skyblue;
 	}
 	
 	.main {
@@ -47,7 +47,7 @@
 	
 	.right {
 		grid-area : right;
-		background-color : grey;
+		background-color : skyblue;
 	}
 	
 </style>
@@ -57,7 +57,7 @@
 	<je:Top></je:Top>
 	<je:navBar></je:navBar>
 	
-	<div class="container">
+	<div class="container1">
 		<div class="left">Left</div>
 		<div class="main">Main</div>
 		<div class="right">Right</div>

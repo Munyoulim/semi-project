@@ -14,20 +14,20 @@
 	
 	.left3 {
 		grid-area: left3;
-		background-color : grey;
+		background-color : pink;
 	}
 	
 	.main3 {
 		grid-area: main3;
-		background-color : yellow;
+		background-color : DarkSalmon;
 		
 	}
 	
 	.right3 {
 		grid-area: right3;
-		background-color : grey;
+		background-color : pink;
 	}
-	
+
 </style>
 
 <div class="container3">
@@ -35,7 +35,7 @@
 	<div class="main3">
 		Main
 		<div class="d-inline-flex">
-			<nav class="navbar navbar-expand-lg navbar-light bg-light">
+			<nav class="navbar navbar-expand-lg navbar-light bg-white">
 				<div class="container-fluid">
 					<button class="navbar-toggler" type="button"
 						data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
