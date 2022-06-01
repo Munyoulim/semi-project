@@ -60,5 +60,22 @@
 	   <div class="fl">
 	      
 	   </div>
-	   <div class="right2"><a href="">로그인</a> <a href="/jeju/Member/signup">회원가입</a></div>
+	   <div class="right2">
+	   <a href="/jeju/Member/login">로그인</a> 
+	   <a href="/jeju/Member/signup">회원가입</a>
+	   <sec:authorize access="isAuthenticated()"> 
+	   	<a href="/Main/home">로그아웃</a>
+	   </sec:authorize>
+	   <div class="d-none">
+      	<form action="${logoutUrl }" id="logoutForm1" method="post"></form>
+       </div>
+	   </div>
+	   
 	</div>
+	
+	
+	
+	
+	
+	
+	

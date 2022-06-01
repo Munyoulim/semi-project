@@ -6,8 +6,32 @@
       http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security.xsd">
 
 <security:http>
-   <security:form-login/>
+
+   	<security:csrf disabled="true"/>
+   	<!-- 로그인 성공 시 경로 -->
+	<security:form-login always-use-default-target="true" login-page="/Member/login" default-target-url="/Main/home" />
+	<security:logout logout-success-url="/Main/home"/>
+	<security:remember-me/>
+	
 </security:http>
 
-<security:authentication-manager></security:authentication-manager>
+	<security:authentication-manager>
+		<security:authentication-provider>
+		<!-- connection 역할 
+			 user 정보를 얻어오는 쿼리-->
+			<security:jdbc-user-service 
+				data-source-ref="dataSource" 
+				users-by-username-query="
+					SELECT id, password, 1
+					FROM Member
+					WHERE id = ? 
+				"
+				authorities-by-username-query="
+					SELECT memberId, role
+					FROM Auth
+					WHERE memberId = ?
+				"
+				/>
+		</security:authentication-provider>
+	</security:authentication-manager>
 </beans>
