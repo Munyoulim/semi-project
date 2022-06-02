@@ -4,16 +4,18 @@
    xmlns:security="http://www.springframework.org/schema/security"
    xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
       http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security.xsd">
+      
+    <bean id="passwordEncoder" class="org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder" />
 
-<security:http>
-
-   	<security:csrf disabled="true"/>
-   	<!-- 로그인 성공 시 경로 -->
-	<security:form-login always-use-default-target="true" login-page="/Member/login" default-target-url="/Main/home" />
-	<security:logout logout-success-url="/Main/home"/>
-	<security:remember-me/>
+	<security:http>
 	
-</security:http>
+	   	<security:csrf disabled="true"/>
+	   	<!-- 로그인 성공 시 경로 -->
+		<security:form-login login-processing-url="/Member/login" always-use-default-target="true" login-page="/Member/login" default-target-url="/Main/home" />
+		<security:logout logout-success-url="/Main/home"/>
+		<security:remember-me/>
+		
+	</security:http>
 
 	<security:authentication-manager>
 		<security:authentication-provider>

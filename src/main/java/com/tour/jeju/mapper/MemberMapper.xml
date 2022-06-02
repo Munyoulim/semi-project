@@ -20,5 +20,11 @@
 		FROM Member
 		WHERE nickName = #{nickName}	
 	</select>
+	
+	<!-- 권한 추가 -->
+	<insert id="insertAuth">
+		INSERT INTO Auth (memberId, role)
+		VALUES (#{id}, #{auth})
+	</insert>
 
 </mapper>

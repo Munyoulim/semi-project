@@ -1,5 +1,7 @@
 package com.tour.jeju.mapper;
 
+import org.apache.ibatis.annotations.Param;
+
 import com.tour.jeju.domain.MemberDto;
 
 public interface MemberMapper {
@@ -9,5 +11,7 @@ public interface MemberMapper {
 	int countMemberId(String id);
 
 	int countMemberNickName(String nickName);
+
+	int insertAuth(@Param("id") String id, @Param("auth") String auth);
 
 }
