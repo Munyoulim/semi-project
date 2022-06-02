@@ -1,0 +1,8 @@
+USE jeju;
+
+DESC Board;
+SELECT * FROM Board;
+
+ALTER TABLE Board
+MODIFY COLUMN body VARCHAR(10000) NOT NULL;
+

@@ -62,6 +62,9 @@
 									<li>
 										<a class="dropdown-item" href="/jeju/Spot/subji">펜션</a>
 									</li>
+									<li>
+										<a class="dropdown-item" href="/jeju/Spot/udo">우도</a>
+									</li>
 								</ul>
 							</li>
 						</ul>

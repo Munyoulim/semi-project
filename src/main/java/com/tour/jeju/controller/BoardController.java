@@ -1,5 +1,7 @@
 package com.tour.jeju.controller;
 
+import java.security.Principal;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -17,14 +19,15 @@ public class BoardController {
 	@Autowired
 	private BoardService service;
 	
-	@GetMapping("write")
-	public void write() {
+	@GetMapping("insert")
+	public void insert() {
 		
 	}
 	
-	@PostMapping("write")
-	public String write(BoardDto board, RedirectAttributes rttr) {
-
+	@PostMapping("insert")
+	public String insert(BoardDto board, Principal principal, RedirectAttributes rttr) {
+		
+		board.setMemberId(principal.getName());
 		boolean success = service.insertBoard(board);
 		
 		if (success) {

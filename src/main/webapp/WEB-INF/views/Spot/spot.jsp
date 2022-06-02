@@ -142,7 +142,26 @@
 				</div>
 			</div>
 		</div>
-		<div class="main-right"></div>
+		<div class="main-right">
+		<a href="/jeju/Board/insert">글쓰기</a>
+		</div>
 	</div>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

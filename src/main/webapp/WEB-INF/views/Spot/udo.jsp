@@ -28,19 +28,31 @@
 	crossorigin="anonymous"></script>
 	
 <style>
-.main-container {
-	display: flex;
-	height: 1200px;
-}
 
-.main-left, .main-right {
-	width: 400px;
-	background-color: grey;
-}
-
-.main-content {
-	flex: 1;
-}
+	.container4 {
+		display : grid;
+		grid-template-columns: 20% 1fr 20%;
+		grid-template-rows : 1fr;
+		height : 100%;
+		grid-gap : 2%;
+		grid-template-areas : "left main right";
+	}
+	
+	.left4 {
+		grid-area : left;
+		background-color : skyblue;
+	}
+	
+	.main4 {
+		grid-area : main;
+		background-color : yellow;
+	}
+	
+	.right4 {
+		grid-area : right;
+		background-color : skyblue;
+	}
+	
 </style>
 
 </head>
@@ -49,15 +61,49 @@
 	<je:Top></je:Top>
 	<je:navBar></je:navBar>
 	
-	<div class="main-container">
-		<div class="main-left">
-		</div>
-		<div class="main-content">
-			<h1>우도</h1>
-		</div>
-		<div class="main-right">
-		</div>
+	<div class="container4">
+		<div class="left4">left</div>
+		<div class="main4">${board.body }</div>
+		<div class="right4">right</div>
 	</div>
 	
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
