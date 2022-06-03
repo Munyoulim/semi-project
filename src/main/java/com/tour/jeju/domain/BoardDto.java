@@ -6,7 +6,7 @@ import lombok.Data;
 
 @Data
 public class BoardDto {
-	private int id;
+	private Integer id;
 	private String title;
 	private String body;
 	private LocalDateTime inserted;

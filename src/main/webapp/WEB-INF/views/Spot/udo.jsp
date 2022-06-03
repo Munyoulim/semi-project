@@ -64,7 +64,8 @@
 	<div class="container4">
 		<div class="left4">left</div>
 		<div class="main4">${board.body }</div>
-		<div class="right4">right</div>
+		<div class="right4">right
+		<a href="/jeju/Board/insert?c=1">글쓰기</a></div>
 	</div>
 	
 </body>
